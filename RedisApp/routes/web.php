@@ -11,9 +11,16 @@
 |
 */
 
+use Illuminate\Support\Facades\Redis;
+
 Route::get('/', function () {
-    return view('welcome');
+    $visits = Redis::incr('visits');
+    return view('welcome')->with('visits', $visits);
 });
+
+/*Route::get('/', function () {
+    return view('welcome');
+});*/
 
 Auth::routes();
 
