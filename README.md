@@ -1,5 +1,31 @@
 # Redis
 
+## Install dev env
+### Windows 
+To install redis go to the  microsoft archive github repository: https://github.com/MicrosoftArchive/redis/releases
+
+Download the last .msi installer and install it.
+
+At the end, you should have a redis process running in background.
+
+
+### VMWare 
+#### Install redis-server and run it
+`apt-get install redis-server`
+
+`systemctl enable redis-server.service`
+
+## Install the project
+
+`git clone https://github.com/AlexandreJunod/Redis.git`
+
+#### Windows
+`cd RedisApp`
+
+`php artisan serve`
+
+You should now be able to access your website by going to `http://localhost:8000` (or any other ports if changed)
+
 # Mise en place de l'environement de travail - Création
 
 Il existe deux procédure, celle qui correspond à la :
