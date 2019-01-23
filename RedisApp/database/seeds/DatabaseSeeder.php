@@ -16,6 +16,11 @@ class DatabaseSeeder extends Seeder
         // Firstly let's erase all the variables stored before we created new with seeds
         Redis::flushall();
 
-        $this->call(UserSeed::class);
+        $this->call([
+            UserSeed::class,
+            TodoSeed::class,
+            TaskSeed::class,
+            CountSeed::class,
+        ]);
     }
 }

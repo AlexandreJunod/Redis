@@ -13,7 +13,7 @@
 
 use Illuminate\Support\Facades\Redis;
 
-Route::get('/', function () {
+Route::get('/home', function () {
     $visits = Redis::incr('visits');
     return view('welcome')->with('visits', $visits);
 });
@@ -24,4 +24,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'Auth\LoginController@showLoginForm')->name('home');
