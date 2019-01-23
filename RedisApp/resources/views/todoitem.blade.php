@@ -45,6 +45,12 @@
                         </tr>
                     </table>
                 </div>
+                <div class="todoitem col-sm-12 col-md-6 col-lg-3">
+                    <form action="/todoitem/add" method="post">
+                        <textarea name="todoitemvalue" rows="3" cols="60"></textarea>
+                        <button type="button" name="button">Add</button>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
