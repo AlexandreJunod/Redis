@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use Illuminate\Support\Facades\Redis;
+
 class CountSeed extends Seeder
 {
     /**

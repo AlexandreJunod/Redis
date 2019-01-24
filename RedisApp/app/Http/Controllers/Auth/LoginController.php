@@ -45,11 +45,11 @@ class LoginController extends Controller
 
         $credentials = $request->only(["email","password"]);
 
-        dd(Redis::hget("users:users.mail=" . $credentials['email']));
+        dd(Redis::hgetall("users:users.mail=".$credentials['email']));
 
-//        if (Redis::hget(, "email") === $credentials["email"]) {
-//            return $this->sendLoginResponse($request);
-//        }
+        //        if (Redis::hget(, "email") === $credentials["email"]) {
+        //            return $this->sendLoginResponse($request);
+        //        }
 
         $this->incrementLoginAttempts($request);
         return $this->sendFailedLoginResponse($request);

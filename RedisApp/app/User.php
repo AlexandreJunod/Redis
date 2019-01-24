@@ -30,6 +30,7 @@ class User extends Authenticatable
 
     public function get_user($key, $value)
     {
-        Redis::hmget("users:users.$key={{ $value }}");
+        $result = Redis::get("users.$key:users.id=".$value);
+        return $result;
     }
 }

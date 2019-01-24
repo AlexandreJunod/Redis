@@ -25,62 +25,21 @@
                         <button type="button" name="button">New todo</button>
                     </form>
                 </div>
-                <div class="todolist col-sm-12 col-md-6 col-lg-3">
-                    <div class="labelitem"><a href="/todoitem">Maths</a></div>
-                    <div class="progressbar">
-                        <div class="progressbarresult" style='width:50%'></div>
-                        <div class="progressbarlabel">50%</div>
+                @foreach ($todotitle as $keytitle => $valuetitle)
+                    <div class="todolist col-sm-12 col-md-6 col-lg-3">
+                        <div class="labelitem"><a href="/todoitem">{{ $valuetitle }}
+                            @foreach ($tododate as $keydate => $valuedate)
+                                @if($keytitle == $keydate)
+                                    {{ $valuedate }}
+                                @endif
+                            @endforeach
+                        </a></div>
+                        <div class="progressbar">
+                            <div class="progressbarresult" style='width:50%'></div>
+                            <div class="progressbarlabel">50%</div>
+                        </div>
                     </div>
-                </div>
-                <div class="todolist col-sm-12 col-md-6 col-lg-3">
-                    <div class="labelitem"><a href="/todoitem">Physique</a></div>
-                    <div class="progressbar">
-                        <div class="progressbarresult" style='width:37%'></div>
-                        <div class="progressbarlabel">37%</div>
-                    </div>
-                </div>
-                <div class="todolist col-sm-12 col-md-6 col-lg-3">
-                    <div class="labelitem"><a href="/todoitem">Science</a></div>
-                    <div class="progressbar">
-                        <div class="progressbarresult" style='width:71%'></div>
-                        <div class="progressbarlabel">71%</div>
-                    </div>
-                </div>
-                <div class="todolist col-sm-12 col-md-6 col-lg-3">
-                    <div class="labelitem"><a href="/todoitem">Geometrie</a></div>
-                    <div class="progressbar">
-                        <div class="progressbarresult" style='width:13%'></div>
-                        <div class="progressbarlabel">13%</div>
-                    </div>
-                </div>
-                <div class="todolist col-sm-12 col-md-6 col-lg-3">
-                    <div class="labelitem"><a href="/todoitem">Geometrie</a></div>
-                    <div class="progressbar">
-                        <div class="progressbarresult" style='width:13%'></div>
-                        <div class="progressbarlabel">13%</div>
-                    </div>
-                </div>
-                <div class="todolist col-sm-12 col-md-6 col-lg-3">
-                    <div class="labelitem"><a href="/todoitem">Geometrie</a></div>
-                    <div class="progressbar">
-                        <div class="progressbarresult" style='width:13%'></div>
-                        <div class="progressbarlabel">13%</div>
-                    </div>
-                </div>
-                <div class="todolist col-sm-12 col-md-6 col-lg-3">
-                    <div class="labelitem"><a href="/todoitem">Geometrie</a></div>
-                    <div class="progressbar">
-                        <div class="progressbarresult" style='width:13%'></div>
-                        <div class="progressbarlabel">13%</div>
-                    </div>
-                </div>
-                <div class="todolist col-sm-12 col-md-6 col-lg-3">
-                    <div class="labelitem"><a href="/todoitem">Geometrie</a></div>
-                    <div class="progressbar">
-                        <div class="progressbarresult" style='width:13%'></div>
-                        <div class="progressbarlabel">13%</div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </body>

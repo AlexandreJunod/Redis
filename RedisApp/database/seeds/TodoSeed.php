@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use Illuminate\Support\Facades\Redis;
+
 class TodoSeed extends Seeder
 {
     /**
@@ -17,11 +19,11 @@ class TodoSeed extends Seeder
         // Set title for todo with id 1
         Redis::set("todos.title:todos.id=1", "Finir le projet XML1");
         // Set date for todo with id 1
-        Redis::set("todos.title:todos.id=1", "2019-01-25");
+        Redis::set("todos.date:todos.id=1", "2018-04-22");
 
         // Set title for todo with id 2
         Redis::set("todos.title:todos.id=2", "Finir le projet PRW2");
         // Set date for todo with id 2
-        Redis::set("todos.title:todos.id=2", "2019-01-25");
+        Redis::set("todos.date:todos.id=2", "2019-01-25");
     }
 }
