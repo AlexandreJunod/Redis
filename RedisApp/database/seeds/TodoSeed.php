@@ -23,7 +23,5 @@ class TodoSeed extends Seeder
         Redis::set("todos.title:todos.id=2", "Finir le projet PRW2");
         // Set date for todo with id 2
         Redis::set("todos.title:todos.id=2", "2019-01-25");
-
-
     }
 }
