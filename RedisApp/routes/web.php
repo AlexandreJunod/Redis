@@ -25,3 +25,7 @@ Route::get('/home', function () {
 Auth::routes();
 
 Route::get('/', 'Auth\LoginController@showLoginForm')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/todolist', 'todolistController@index');
+Route::get('/todoitem', 'todoitemController@index');
+
