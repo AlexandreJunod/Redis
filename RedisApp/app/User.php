@@ -28,8 +28,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function get($mail)
+    public function get_user($key, $value)
     {
-        Redis::hmget("users:userss.mail={{ $mail }}");
+        Redis::hmget("users:users.$key={{ $value }}");
     }
 }
