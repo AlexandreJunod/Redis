@@ -4,23 +4,33 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <form action="/tasks" method="post">
-                    @method('PUT')
-                    @csrf
-                    <input value="{{ $todoId }}" name="todoId" class="hidden d-none">
                     <div class="todoitem col-12">
                         <table>
                             @foreach($tasks as $taskId)
                                 <tr>
-                                    <td style="width:25px;">
-                                        <input type="hidden" name="checkboxesFinished[{{ $taskId }}]" value="off"/>
-                                        <input type="checkbox"
-                                               name="checkboxesFinished[{{ $taskId }}]"
-                                                {{ (\App\Task::getTaskFinished($taskId)) ? "checked": "" }} />
-                                    </td>
+                                    <form action="/tasks" method="post">
+                                        @method('PUT')
+                                        @csrf
+                                        <input value="{{ $todoId }}" name="todoId" class="hidden d-none">
+                                        <td style="width:25px;">
+                                            <input type="hidden" name="checkboxesFinished[{{ $taskId }}]" value="off"/>
+                                            <input type="checkbox"
+                                                   name="checkboxesFinished[{{ $taskId }}]"
+                                                    {{ (\App\Task::getTaskFinished($taskId)) ? "checked": "" }} />
+                                        </td>
+                                    </form>
                                     <td>
                                         {{ \App\Task::getTaskName($taskId) }}
                                     </td>
+                                    <form method="post" action="/tasks">
+                                        <td>
+                                            @csrf
+                                            @method("DELETE")
+                                            <input value="{{ $todoId }}" name="todoId" class="hidden d-none">
+                                            <input type="hidden" name="taskId" value="{{ $taskId }}"/>
+                                            <button class="delete" type="submit" name="buttonTask" value="add">Supprimer</button>
+                                        </td>
+                                    </form>
                                 </tr>
                             @endforeach
                         </table>
@@ -29,24 +39,6 @@
                         <button class="update" type="submit" name="buttonTask" value="add">Mettre à jour</button>
                     </div>
                 </form>
-            </div>
-            <div class="col-2">
-                <table>
-                    @foreach($tasks as $taskId)
-                        <tr>
-                            <td>
-                                <form method="post" action="/tasks">
-                                    @csrf
-                                    @method("DELETE")
-                                    <input value="{{ $todoId }}" name="todoId" class="hidden d-none">
-                                    <input type="hidden" name="taskId" value="{{ $taskId }}"/>
-                                    <button class="delete" type="submit" name="buttonTask" value="add">Supprimer</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
-                </table>
-
             </div>
             <div class="col-4">
                 <form method="post" action="/tasks">
