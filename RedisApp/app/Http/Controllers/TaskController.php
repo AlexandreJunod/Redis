@@ -79,11 +79,6 @@ class TaskController extends Controller
      */
     public function update(Request $request)
     {
-        if($request->buttonTask == "delete"){
-            $this->destroy($request);
-            return;
-        }
-
         foreach ($request->checkboxesFinished as $taskId => $checkbox){
            if($checkbox == "on"){
                 Redis::set("tasks.finished:tasks.id=$taskId", true);
@@ -103,6 +98,9 @@ class TaskController extends Controller
      */
     public function destroy(Request $request)
     {
+        Redis::lrem("tasks:todos.id=$request->todoId", 0, $request->taskId);
+
+        return redirect('/tasks/' . $request->todoId);
         // TODO: Faire en sorte qu'on puisse récupérer le task id quand on appuie sur le bouton "Supprimer" sur tasklist.blade.php
 //        Redis::lrem("tasks:todos.id=$request->todoId", $request->);
     }
