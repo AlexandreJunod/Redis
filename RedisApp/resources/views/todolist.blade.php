@@ -24,8 +24,11 @@
                     <div class="progressbarlabel">50%</div>
                 </div>
                 <div class="buttonholder">
-                <button class="delete">Supprimer</button></div>
-            </div>
+                    <form action="/todo/destroy" method="post">
+                        @csrf
+                        <button name="todoId" value="{{$todoId}}" class="delete">Supprimer</button></div>
+                    </form>
+                </div>
         @endforeach
     </div>
 </div>

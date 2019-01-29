@@ -16,7 +16,7 @@
                                             <input type="hidden" name="checkboxesFinished[{{ $taskId }}]" value="off"/>
                                             <input type="checkbox"
                                                    name="checkboxesFinished[{{ $taskId }}]"
-                                                    {{ (\App\Task::getTaskFinished($taskId)) ? "checked": "" }} />
+                                                    {{ (\App\Task::getTaskFinished($taskId)) ? "checked": "" }}/>
                                         </td>
                                     </form>
                                     <td>
