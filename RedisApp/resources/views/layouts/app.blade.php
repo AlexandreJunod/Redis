@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <a href="/">
@@ -20,5 +21,8 @@
     </a>
     
     @yield('content')
+
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/redis.js') }}"></script>
 </body>
 </html>

@@ -68,7 +68,7 @@ class TaskController extends Controller
      */
     public function update(Request $request)
     {
-        foreach ($request->checkboxesFinished as $taskId => $checkbox){
+        foreach ($request->_checkboxesFinished as $taskId => $checkbox){
            if($checkbox == "on"){
                 Redis::set("tasks.finished:tasks.id=$taskId", true);
            }else{
