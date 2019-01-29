@@ -28,6 +28,8 @@ Une version windows est requise pour faire fonctionner l'application
 
   `mv .env.example .env`
 
+- Renommer le fichier .env.example en .env
+
 - Générer la clef 
 
   `php artisan key:generate`
