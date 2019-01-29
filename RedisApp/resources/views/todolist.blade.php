@@ -8,7 +8,7 @@
         </div>
         <div class="addtodo col-6">
             <form action="/todolist/add">
-                <button type="button" name="button">New todo</button>
+                <button class="create" type="button" name="button">New todo</button>
             </form>
         </div>
         @foreach ($todos as $todoId)

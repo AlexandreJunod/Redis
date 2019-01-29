@@ -26,7 +26,7 @@
                         </table>
                     </div>
                     <div class="row justify-content-center align-items-center mt-4">
-                        <button type="submit" name="buttonTask" value="add">Mettre à jour</button>
+                        <button class="update" type="submit" name="buttonTask" value="add">Mettre à jour</button>
                     </div>
                 </form>
             </div>
@@ -40,7 +40,7 @@
                                     @method("DELETE")
                                     <input value="{{ $todoId }}" name="todoId" class="hidden d-none">
                                     <input type="hidden" name="taskId" value="{{ $taskId }}"/>
-                                    <button type="submit" name="buttonTask" value="add">Supprimer</button>
+                                    <button class="delete" type="submit" name="buttonTask" value="add">Supprimer</button>
                                 </form>
                             </td>
                         </tr>
@@ -54,7 +54,7 @@
                     <input value="{{ $todoId }}" name="todoId" class="hidden d-none">
                     <div class="todoitem col-12">
                         <textarea name="newTask" rows="3" cols="60"></textarea>
-                        <button type="submit" name="buttonTask" value="add">Add</button>
+                        <button class="create" type="submit" name="buttonTask" value="add">Add</button>
                     </div>
                 </form>
             </div>
