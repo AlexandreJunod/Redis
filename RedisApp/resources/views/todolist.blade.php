@@ -7,8 +7,10 @@
             Number of todos : {{ count($todos) }}
         </div>
         <div class="addtodo col-6">
-            <form action="/todolist/add">
-                <button class="create" type="button" name="button">New todo</button>
+            <form action="/todo/add" method="post">
+                @csrf
+                <input type="text" name="newTodo">
+                <button class="create" name="button">New todo</button>
             </form>
         </div>
         @foreach ($todos as $todoId)
@@ -18,10 +20,6 @@
                         {{ \App\Todo::getTodoTitle($todoId) }}
                         {{ \App\Todo::getTodoDate($todoId) }}
                     </a>
-                </div>
-                <div class="progressbar">
-                    <div class="progressbarresult" style='width:50%'></div>
-                    <div class="progressbarlabel">50%</div>
                 </div>
                 <div class="buttonholder">
                     <form action="/todo/destroy" method="post">

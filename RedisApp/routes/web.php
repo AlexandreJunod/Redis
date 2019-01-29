@@ -22,3 +22,4 @@ Route::put('/tasks/updatecheckbox',            'TaskController@updatecheckbox');
 Route::delete('/tasks',         'TaskController@destroy');
 Route::get('/home',             'HomeController@index')->name('home');
 Route::post('/todo/destroy',    'TodoController@destroy');
+Route::post('/todo/add',        'TodoController@create');
