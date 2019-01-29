@@ -1,5 +1,41 @@
 # Redis
 
+## Installation du projet
+
+Il faut tout dabord se trouver sous Windows 10, la compability n'a pas été testée sur Windows 7.
+
+- Installer [redis](https://github.com/MSOpenTech/redis/releases/download/win-3.2.100/Redis-x64-3.2.100.msi) 
+
+- Installer [composer](https://getcomposer.org/)
+
+- Cloner le projet
+
+  `git clone https://github.com/AlexandreJunod/Redis.git`
+
+- Se rendre dans le répertoire cloné en ligne de commandes
+
+  `cd RedisApp`
+
+- Installer les dépendances
+
+  `composer install`
+
+- Générer la clef 
+
+  `php artisan key:generate`
+
+- Générer la base de donnée Redis
+
+  `php artisan db:seed`
+
+- Démarrer le serveur
+
+  `php artisan serve`
+
+L'installation est terminée, votre application est herbergée a [cette adresse](http://localhost:8000)
+
+
+
 ## Install dev env
 ### Windows 
 To install redis go to the  microsoft archive github repository: https://github.com/MicrosoftArchive/redis/releases
@@ -15,85 +51,9 @@ At the end, you should have a redis process running in background.
 
 `systemctl enable redis-server.service`
 
-## Install the project
 
-`git clone https://github.com/AlexandreJunod/Redis.git`
 
-#### Windows
-`cd RedisApp`
-
-`php artisan serve`
-
-You should now be able to access your website by going to `http://localhost:8000` (or any other ports if changed)
-
-# Mise en place de l'environement de travail - Création
-
-Il existe deux procédure, celle qui correspond à la :
-
-- Création
-- Copie  
-
-### A améliorer mais important  (mieux décrire) : 
-
-- Mettre composer à jour
-
-### Créer un nouveau projet laravel (ou importer)
-
-``new laravel NOM_DU_PROJET`` 
-
-### Ajouter les librairies predis ou redis
-
-``composer require predis/predis``
-
-### Céer une VM sur debian 9.3 ou + (stable)
-
-- ** A expliquer les différentes étapes importantes**
-
-### Installer redis-server sur la vm et lancer le service
-
-- `apt-get install redis-server`
-- `systemctl enable redis-server.service`
-
-### Exporter les données sur la VM
-
-- Exporter les données par ftp/sftp
-
-- Gérer les permissions sur le serveur (/var/www)
-
-  `chmod 777 -R *`
-
-# Mise en place de l'environement de travail - Copie
-
-### Reprendre les fichiers 
-
-- Copier le git
-
-### Installer les dépendances 
-
-`composer install`
-
-### Configuration
-
-- Copier le fichier .env.exemple et le renommer en .env
-
-- Générer la clef 
-
-  `php asrtisan key:generate` 
-
-### Installer redis-server sur la vm et lancer le service
-
-- `apt-get install redis-server`
-- `systemctl enable redis-server.service`
-
-### Exporter les données sur la VM
-
-- Exporter les données par ftp/sftp
-
-- Gérer les permissions sur le serveur (/var/www)
-
-  `chmod 777 -R *`
-
-## Erreures connues 
+## Erreures connues sous VM
 
 ### Classe redis/client
 
