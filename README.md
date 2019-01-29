@@ -18,7 +18,7 @@ Une version windows est requise pour faire fonctionner l'application
 
 - Se rendre dans le répertoire cloné en ligne de commandes
 
-  `cd RedisApp`
+  `cd Redis\RedisApp`
 
 - Installer les dépendances
 
