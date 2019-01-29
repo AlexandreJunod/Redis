@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use Illuminate\Support\Facades\Redis;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        // Firstly let's erase all the variables stored before we created new with seeds
+        Redis::flushall();
+
+        $this->call([
+            UserSeed::class,
+            TodoSeed::class,
+            TaskSeed::class,
+            CountSeed::class,
+        ]);
     }
 }

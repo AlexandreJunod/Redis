@@ -1,0 +1,116 @@
+.logo {
+  content: url('../svg/RedisToDo.svg');
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.logocredentials{
+    content: url('../svg/RedisToDo.svg');
+    width: 100px;
+    height: auto;
+}
+
+.title {
+  font-size: 50px;
+  color: #86d2f7;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.form {
+  font-size: 25px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.form .forminput {
+  width: 100%;
+}
+
+.form .formbutton {
+  width: 100%;
+  height: 40px;
+  border: 0px;
+  background-color: #f1c40f;
+  color: white;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+.todolist {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #ecf0f1;
+  margin: 10px;
+  border-radius: 15px;
+  color: #3498db;
+}
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+.labelitem {
+  font-size: 26px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+  color: black;
+}
+
+
+.addtodo {
+  font-size: 26px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.is-center{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonholder{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.todoitem table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.todoitem th, td {
+    border-bottom: 1px solid #bdc3c7;
+    font-size: 20px;
+}
+
+
+.create{
+    background-color: #27ae60;
+}
+
+.delete{
+    background-color: #e74c3c;
+}
+
+.update{
+    background-color: #f39c12;
+}
+
+button{
+    border-radius: 8px;
+    border: 0px;
+    color: white;
+}
