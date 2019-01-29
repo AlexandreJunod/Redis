@@ -4,6 +4,8 @@
 
 Il faut tout dabord se trouver sous Windows 10, la compability n'a pas été testée sur Windows 7.
 
+**Attention php 7.1.3 ou supérieur est nécessaire pour que laravel fonctionne, installer une version récente de wamp est nécessaire afin d'obtenir une version supérieur à php 7.1.3**
+
 - Installer [redis](https://github.com/MSOpenTech/redis/releases/download/win-3.2.100/Redis-x64-3.2.100.msi) 
 
 - Installer [composer](https://getcomposer.org/)
