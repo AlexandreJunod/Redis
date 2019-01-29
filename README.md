@@ -8,7 +8,7 @@ Une version windows est requise pour faire fonctionner l'application
 
 - Installer [redis (.msi)](https://github.com/MSOpenTech/redis/releases/download/win-3.2.100/Redis-x64-3.2.100.msi) 
 
-  `A noter que le setup ci-dessus va installer un service windows pour Redis. La base de donnée sera alors opérationnel dès la fin de l'installation`
+  `A noter que le setup ci-dessus va installer un service windows pour Redis. La base de données (le logiciel Redis) sera alors opérationnel dès la fin de l'installation`
 
 - Installer [composer](https://getcomposer.org/)
 
