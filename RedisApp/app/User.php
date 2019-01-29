@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Redis;
 
 class User extends Authenticatable
 {
@@ -28,9 +29,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function get_user($key, $value)
+
+    static public function getUser($key, $value)
     {
-        $result = Redis::get("users.$key:users.id=".$value);
+        $result = Redis::hgetall("users:users.$key=$value");
         return $result;
     }
 }

@@ -13,19 +13,24 @@
 
 use Illuminate\Support\Facades\Redis;
 
-Route::get('/home', function () {
-    $visits = Redis::incr('visits');
-    return view('welcome')->with('visits', $visits);
-});
+
+Route::get('/', 'TodoController@index');
+Route::get('/tasks/{todoId}',   'TaskController@index');
+Route::post('/tasks',           'TaskController@store');
+Route::put('/tasks',            'TaskController@update');
+Route::get('/home',             'HomeController@index')->name('home');
+
+//Route::get('/home', function () {
+//    $visits = Redis::incr('visits');
+//    return view('welcome')->with('visits', $visits);
+//});
 
 /*Route::get('/', function () {
     return view('welcome');
 });*/
 
-Auth::routes();
+//Auth::routes();
 
 //Route::get('/', 'Auth\LoginController@showLoginForm')->name('home');
-Route::get('/', 'todolistController@index');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/todolist', 'todolistController@index');
-Route::get('/todoitem', 'todoitemController@index');
+
+

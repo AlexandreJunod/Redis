@@ -13,9 +13,9 @@ class UserSeed extends Seeder
      */
     public function run()
     {
-
         // Redis hashes: https://redis.io/topics/data-types-intro#redis-hashes
         Redis::hmset("users:users.mail=gille.ejone@cpnv.ch", [
+            'id' => 1,
             'name' => 'Gille',
             'surname' => 'Éjone',
             'email' => 'gille.ejone@cpnv.ch',
@@ -24,6 +24,7 @@ class UserSeed extends Seeder
 
         // Redis hashes: https://redis.io/topics/data-types-intro#redis-hashes
         Redis::hmset("users:users.mail=admin@cpnv.ch", [
+            'id' => 2,
             'name' => 'Admin',
             'surname' => 'Admin',
             'email' => 'admin@cpnv.ch',

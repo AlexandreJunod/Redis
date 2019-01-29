@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Database\Eloquent\Model;
+use Zend\Diactoros\Request;
 
 class Todo extends Model
 {
@@ -25,6 +26,18 @@ class Todo extends Model
             }
         }
         return $result;
+    }
+
+    static public function getTodoIdListForUser($id){
+        return Redis::lrange("todos:users.id=$id", 0,-1);
+    }
+
+    static public function getTodoTitle($id){
+        return Redis::get("todos.title:todos.id=$id");
+    }
+
+    static public function getTodoDate($id){
+        return Redis::get("todos.date:todos.id=$id");
     }
 
     /*public static function get_todo()

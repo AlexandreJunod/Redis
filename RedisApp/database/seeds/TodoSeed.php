@@ -14,7 +14,7 @@ class TodoSeed extends Seeder
     public function run()
     {
         // Let's create "links"/"joins" to the todos for the user with id 1
-        Redis::lpush("todos:users.id=1", 1, 2); // Redis list: https://redis.io/topics/data-types-intro#redis-lists
+        Redis::rpush("todos:users.id=1", 1, 2); // Redis list: https://redis.io/topics/data-types-intro#redis-lists
 
         // Set title for todo with id 1
         Redis::set("todos.title:todos.id=1", "Finir le projet XML1");
