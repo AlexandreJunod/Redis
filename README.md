@@ -23,6 +23,7 @@ Une version windows est requise pour faire fonctionner l'application
   `composer install`
   
 - Renomer .env.example en .env
+
   `mv .env.example .env`
 
 - Générer la clef 
