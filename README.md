@@ -6,7 +6,9 @@ Une version windows est requise pour faire fonctionner l'application
 
 **Attention php 7.1.3 ou supérieur est nécessaire pour que laravel fonctionne. Il est possible d'installer une version récente de wamp afin d'obtenir une version supérieur à php 7.1.3**
 
-- Installer [redis(.msi)](https://github.com/MSOpenTech/redis/releases/download/win-3.2.100/Redis-x64-3.2.100.msi) 
+- Installer [redis (.msi)](https://github.com/MSOpenTech/redis/releases/download/win-3.2.100/Redis-x64-3.2.100.msi) 
+
+ `A noter que le setup ci-dessus va installer un service windows pour Redis. La base de donnée sera alors opérationnel dès la fin de l'installation`
 
 - Installer [composer](https://getcomposer.org/)
 
