@@ -22,6 +22,8 @@ Il faut tout dabord se trouver sous Windows 10, la compability n'a pas été tes
 
   `composer install`
 
+- Renommer le fichier .env.example en .env
+
 - Générer la clef 
 
   `php artisan key:generate`
