@@ -105,6 +105,13 @@ a:hover {
   color: white;
 }
 
+.buttonholder{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .todoitem table {
     border-collapse: collapse;
     width: 100%;

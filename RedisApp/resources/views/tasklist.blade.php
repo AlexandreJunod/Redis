@@ -8,7 +8,7 @@
                         <table>
                             @foreach($tasks as $taskId)
                                 <tr>
-                                    <form action="/tasks" method="post">
+                                    <form id="updatecheckbox" action="/tasks" method="post">
                                         @method('PUT')
                                         @csrf
                                         <input value="{{ $todoId }}" name="todoId" class="hidden d-none">
@@ -36,7 +36,7 @@
                         </table>
                     </div>
                     <div class="row justify-content-center align-items-center mt-4">
-                        <button class="update" type="submit" name="buttonTask" value="add">Mettre à jour</button>
+                        <button class="update" type="submit" name="buttonTask" value="add" form="updatecheckbox">Mettre à jour</button>
                     </div>
                 </form>
             </div>

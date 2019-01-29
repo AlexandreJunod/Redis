@@ -23,6 +23,8 @@
                     <div class="progressbarresult" style='width:50%'></div>
                     <div class="progressbarlabel">50%</div>
                 </div>
+                <div class="buttonholder">
+                <button class="delete">Supprimer</button></div>
             </div>
         @endforeach
     </div>
